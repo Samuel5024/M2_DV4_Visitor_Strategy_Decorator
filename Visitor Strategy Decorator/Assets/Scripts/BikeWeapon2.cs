@@ -41,13 +41,37 @@ public class BikeWeapon2 : MonoBehaviour
 
         if(_isFiring)
         {
-            yield returnn new WaitForSeconds(firingRate);
+            StartCoroutine(FireWeapon());
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator FireWeapon()
     {
-        
+        float firingRate = 1.0f / _weapon.Rate;
+
+        while (_isFiring)
+        {
+            yield return new WaitForSeconds(firingRate);
+            Debug.Log("fire");
+        }
+    }
+
+    public void Reset()
+    {
+        _weapon = new Weapon(weaponConfig);
+        _isDecorated = !_isDecorated;
+    }
+
+    public void Decorate()
+    {
+        if(mainAttachment && !secondaryAttachment)
+        {
+            _weapon = new WeaponDecorator(_weapon, mainAttachment);
+        }
+        if(mainAttachment && secondaryAttachment)
+        {
+            _weapon = new WeaponDecorator(new WeaponDecorator(_weapon, mainAtatchment), secondaryAttachment);
+        }
+        _isDecorated = !_isDecorated;
     }
 }
