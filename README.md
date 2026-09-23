@@ -1,2 +1,1 @@
-# M2_DV4_Visitor_Strategy_Decorator
-
+# M2 DV4: Visitor, Strategy, Decorator
