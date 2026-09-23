@@ -1,16 +1,19 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class BikeController : MonoBehaviour, IBikeElement
 {
+    private List<IBikeElement> _bikeElements = new List <IBikeElement>();    
     
     void Start()
     {
-        
+        _bikeElements.Add(gameObject.AddComponent<BikeShield>());
+        _bikeElements.Add(gameObject.AddComponent<BikeWeapon>());
+        _bikeElements.Add(gameObject.AddComponent<BikeEngine>());
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Accept(IVisitor visitor)
     {
-        
+        element.Accept(visitor);
     }
 }
