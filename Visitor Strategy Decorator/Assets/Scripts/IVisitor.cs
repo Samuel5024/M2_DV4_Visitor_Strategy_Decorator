@@ -1,4 +1,4 @@
-public interface Visitor_IVisitor
+public interface IVisitor
 {
     void Visit(BikeShield bikeShield);
     void Visit(BikeEngine bikeEngine);
