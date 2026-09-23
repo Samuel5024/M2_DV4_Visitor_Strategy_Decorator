@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BikeEngine : MonoBehaviour
+public class BikeEngine : MonoBehaviour, IBikeElement
 {
     public float turboBoost = 25.0f; // mph
     public float maxTurboBoost = 200.0f;

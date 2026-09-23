@@ -43,7 +43,7 @@ public class PowerUp : ScriptableObject, IVisitor
             bikeWeapon.range = range;
         }
 
-        float strength = bikeWeapon.strength += mathf.Round(bikeWeapon.strength * weaponStrength / 100);
+        float strength = bikeWeapon.strength += Mathf.Round(bikeWeapon.strength * weaponStrength / 100);
 
         if(strength >= bikeWeapon.maxStrength)
         {
@@ -57,11 +57,11 @@ public class PowerUp : ScriptableObject, IVisitor
 
     public void Visit(BikeEngine bikeEngine)
     {
-        float boost = bikeengine.turboBoost += turboBoost;
+        float boost = bikeEngine.turboBoost += turboBoost;
 
         if(boost < 0.0f)
         {
-            bikeengine.turboBoost = 0.0f;
+            bikeEngine.turboBoost = 0.0f;
         }
 
         if(boost >= bikeEngine.maxTurboBoost)

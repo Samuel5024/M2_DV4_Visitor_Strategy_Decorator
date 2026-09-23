@@ -14,6 +14,9 @@ public class BikeController : MonoBehaviour, IBikeElement
 
     public void Accept(IVisitor visitor)
     {
-        element.Accept(visitor);
+        foreach(IBikeElement element in _bikeElements)
+        {
+            element.Accept(visitor);
+        }
     }
 }
