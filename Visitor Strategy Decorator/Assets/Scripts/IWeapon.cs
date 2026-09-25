@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class IWeapon
+public interface IWeapon
 {
     float Range
     {

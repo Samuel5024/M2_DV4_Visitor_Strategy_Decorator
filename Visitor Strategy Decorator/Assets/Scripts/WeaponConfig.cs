@@ -32,6 +32,14 @@ public class WeaponConfig : ScriptableObject, IWeapon
         }
     }
 
+    public float Range
+    {
+        get
+        {
+            return range;
+        }
+    }
+
     public float Strength
     {
         get
