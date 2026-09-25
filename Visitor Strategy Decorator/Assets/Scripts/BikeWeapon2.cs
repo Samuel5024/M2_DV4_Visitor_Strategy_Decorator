@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Chapter.Decorator;
 
 public class BikeWeapon2 : MonoBehaviour
 {
@@ -70,7 +71,7 @@ public class BikeWeapon2 : MonoBehaviour
         }
         if(mainAttachment && secondaryAttachment)
         {
-            _weapon = new WeaponDecorator(new WeaponDecorator(_weapon, mainAtatchment), secondaryAttachment);
+            _weapon = new WeaponDecorator(new WeaponDecorator(_weapon, mainAttachment), secondaryAttachment);
         }
         _isDecorated = !_isDecorated;
     }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using Chapter.Decorator;
 
 [CreateAssetMenu(fileName = "NewWeaponAttachment", menuName = "Weapon/Attachment", order = 1)]
 

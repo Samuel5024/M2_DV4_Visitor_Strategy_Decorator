@@ -1,24 +1,10 @@
-using UnityEngine;
-
-public interface IWeapon
+namespace Chapter.Decorator
 {
-    float Range
+    public interface IWeapon
     {
-        get;
-    }
-
-    float Duration
-    {
-        get;
-    }
-
-    float Strength
-    {
-        get;
-    }
-
-    float Cooldown
-    {
-        get;
+        float Rate { get; }
+        float Range { get; }
+        float Strength { get; }
+        float Cooldown { get; }
     }
 }

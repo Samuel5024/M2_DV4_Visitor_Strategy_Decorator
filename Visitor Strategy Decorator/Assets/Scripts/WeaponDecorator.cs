@@ -1,6 +1,7 @@
 using UnityEngine;
+using Chapter.Decorator;
 
-public class WeaponDecorator
+public class WeaponDecorator : IWeapon
 {
     private readonly IWeapon _decoratedWeapon;
     private readonly WeaponAttachment _attachment;

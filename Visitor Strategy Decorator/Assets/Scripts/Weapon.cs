@@ -1,43 +1,32 @@
-using UnityEngine;
-
-public class Weapon : IWeapon
+namespace Chapter.Decorator
 {
-    public float Range
+    public class Weapon : IWeapon
     {
-        get
+        public float Range
         {
-            return _config.Range;
+            get { return _config.Range; }
         }
-    }
 
-    public float Rate
-    {
-        get
+        public float Rate
         {
-            return _config.Rate;
+            get { return _config.Rate; }
         }
-    }
 
-    public float Strength
-    {
-        get
+        public float Strength
         {
-            return _config.Strength;
+            get { return _config.Strength; }
         }
-    }
 
-    public float Cooldown
-    {
-        get
+        public float Cooldown
         {
-            return _config.Cooldown;
+            get { return _config.Cooldown; }
         }
-    }
 
-    private readonly WeaponConfig _config;
+        private readonly WeaponConfig _config;
 
-    public Weapon(WeaponConfig weaponConfig)
-    {
-        _config = weaponConfig;
+        public Weapon(WeaponConfig weaponConfig)
+        {
+            _config = weaponConfig;
+        }
     }
 }
